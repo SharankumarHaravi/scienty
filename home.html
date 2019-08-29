@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bank Branches</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	table {
+             border: solid 1pt black;
+          }
+      tr {
+             border: solid 1pt black;
+         }
+</style>
+</head>
+<body background="ab.jpg">
+	<marquee><h1>
+BANK SEARCHES</h1></marquee><br>
+<hr>
+<form method="get" action="process.php">
+<fieldset>
+<legend>Details</legend>
+<center><p>
+<label>Country: </label>
+<select name="where">
+<option>Choose a city</option>
+<option>Banglore</option>
+<option>Mumbia</option>
+<option>Delhi</option>
+<option>Kerala</option>
+<option>Telangan</option>
+</select>
+
+
+
+<label>Title: </label>
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for bank names" title="Type in a name"><br>
+<br><input type="submit" />
+
+
+
+
+
+
+
+<script>
+function myFunction()
+ {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++)
+     {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1)
+         {
+            li[i].style.display = "";
+         }
+          else 
+         {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+
+
+
+</center>
+</fieldset>
+</form>
+
+<hr>
+<p>
+<center>
+<table>
+<ul id="myUL">
+  <li><a href="#"><h3>YES BANK</h3></a></li>
+  <li><a href="#"><h3>VIJAYA BANK</h3></a></li>
+
+  <li><a href="#"><h3>UCO BANK</h3></a></li>
+  <li><a href="#"><h3>AXIS BANK</h3></a></li>
+
+  <li><a href="#"><h3>SYNDICATE BANK</h3></a></li>
+ 
+  </ul>
+</table></center>
+</p>
+
+</body>
+
+</html>
